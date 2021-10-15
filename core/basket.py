@@ -40,7 +40,10 @@ class Basket(BasketInterface):
         product = self.catalogue.get(product_code)
         if product is not None:
             product = copy.deepcopy(product)
+            product.update({"product_code": product_code})
             self.items.append(product)
+        else:
+            raise ValueError(f"You are trying to add a product with code {product_code} which does not exist.")
         return self
 
     def calculate_total(self) -> float:

@@ -34,3 +34,13 @@
     -> One possible solution for this could be that we implement a different class which handles the impact of offer when calculating the total. This class then can be declared inside the Basket class i.e
        Composition. We can then pass different configurations related to offer similar to approach described above for product catalogue and delivery_cost. 
        By default, we can use either no offer or use offers which are thoroughly tested. This way we can experiment without modifying the Basket Class. 
+
+## HOW TO USE
+
+#### Driver Code
+    Use driver_code.py to run the code.
+    
+#### Run Tests
+```
+python3 -m pytest /tests
+```
